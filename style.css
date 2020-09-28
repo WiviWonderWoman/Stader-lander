@@ -1,0 +1,36 @@
+.flex-container{
+    display: flex; 
+    justify-content: center;
+}
+/*unordered list, flex, wrap*/
+.flex-container ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+/*list items, grow, no bulletpoints*/  
+.flex-container ul li {
+    flex-grow: 1;
+    list-style: none;
+}
+
+.flex-container button{
+    margin: 5px;
+    
+    border:black solid 2px;
+    border-radius: 10%;
+    background-color: gray;
+    
+}
+/*changes buttons when hoover*/ 
+.flex-container ul li button:hover {
+    
+    background-color:black;
+    color: white;
+}
+#visited {
+    background-color: rgb(68, 231, 139);
+}
+#visited:hover {
+    background-color: green ;
+}
