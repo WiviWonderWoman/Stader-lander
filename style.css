@@ -1,29 +1,25 @@
-.flex-container{
+ .flex-container{
     display: flex; 
     justify-content: center;
-}
+} 
 /*unordered list, flex, wrap*/
-.flex-container ul {
+.flex-container dl {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-  }
-/*list items, grow, no bulletpoints*/  
-.flex-container ul li {
-    flex-grow: 1;
     list-style: none;
-}
+    flex-grow: 1;
+  } 
 
-.flex-container button{
-    margin: 5px;
-    
+.flex-container dl dt{
+    margin: 10px;
     border:black solid 2px;
     border-radius: 10%;
     background-color: gray;
     
-}
+} 
 /*changes buttons when hoover*/ 
-.flex-container ul li button:hover {
+.flex-container dl :hover {
     
     background-color:black;
     color: white;
@@ -33,4 +29,4 @@
 }
 #visited:hover {
     background-color: green ;
-}
+} 
