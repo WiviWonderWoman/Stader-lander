@@ -2,29 +2,47 @@
 const app = 
 {
     länder: [],
-    // value: "1234",
-
+    städer: []
 }
 
 fetch('./land.json')
 .then(resp => resp.json())
-.then(data => landMeny(data))
+.then(data => land(data))
 
-function landMeny(data){
+function land(data){
      for (let index = 0; index < data.length; index++) {
          const element = data[index];
          app.länder.unshift(element);
-         document.getElementById('landMeny').innerHTML += `<li><button>`+element.countryname+`</button></li>`;
+        
         }
-        document.getElementById('landMeny').innerHTML += `<li><button id="visited">Besökt</button></li>`;
+        meny(); 
+        console.log(app.städer);
 }
-console.log(app.länder);
+ 
 
-// fetch('./stad.json')
-// .then(resp => resp.json())
-// .then(data => console.log(data))
+fetch('./stad.json')
+.then(resp => resp.json())
+.then(data => stad(data))
 
-    
+function stad(data){
+    for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        app.städer.push(element);
+    }
+    console.log(app.länder);
+}
+
+function meny() {
+    for (let index = 0; index < app.länder.length; index++) {
+        const land = app.länder[index];
+        let landID = land.id;
+        let landNamn = land.countryname;
+        console.log(land, landID, landNamn);
+        document.getElementById('landMeny').innerHTML += `<dt>`+landNamn+`</dt>`;  
+    }
+    document.getElementById('landMeny').innerHTML += `<dt>Besökt</dt>`;
+}
+  
 
 
 
