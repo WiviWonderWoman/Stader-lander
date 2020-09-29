@@ -1,33 +1,91 @@
- /* .flex-container{
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(78, 84, 84);
+    color: cornsilk;
+    font-family: sans-serif;
+}
+header, nav, article, footer {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border: cornsilk solid 1px;
+    border-radius: 10px;
+    background-color: black;
+}
+/* article, footer { 
+    padding: 10px;
+} */
+header, footer {
+    justify-content: center;
+}
+header {
+    height: 5%; 
+}
+footer {
+    margin-bottom: 20px;
+}
+
+/*Headings*/
+h1{ 
+    margin: auto;   
+    font-family: 'Amatic SC';
+    font-size: 3em;
+    justify-content: center;
+    display: flex; 
+}
+
+ .flex-container{
     display: flex; 
     justify-content: center;
 } 
 
-.flex-container dl {
+.flex-container ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
   } 
-.flex-container dl dt {
-    flex-grow: 1;
+/*Flexbox settings, center*/
+.flex-container{
+    display: flex; 
+    justify-content: center;
+}
+/*unordered list, flex, wrap*/
+.flex-container ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
-.flex-container button{
-    margin: 10px;
-    border:black solid 2px;
-    border-radius: 10%;
-    background-color: gray;
-    
+/*list items, grow, no bulletpoints*/  
+.flex-container ul li {
+    flex-grow: 1;
+    list-style: none;
 } 
-
-.flex-container button:hover {
-    
-    background-color:black;
-    color: white;
+/*buttons*/  
+.flex-container button{
+    font-family: 'Amatic SC';
+    font-size: 1.5em;
+    color: cornsilk;
+    margin: 5px;
+    border: cornsilk solid 2px;
+    border-radius: 10%;
+    background-color: rgb(38, 39, 41);
+}
+#stadID{
+    font-size: 1em;
+    margin: auto;
+}
+/*changes buttons when hoover*/ 
+.flex-container ul li button:hover {
+    background-color: cornsilk;
+    color: black;
 }
 #visited {
     background-color: rgb(68, 231, 139);
+    color: black;
 }
 #visited:hover {
     background-color: green ;
-}  */
+    color: cornsilk;
+} 
