@@ -2,7 +2,9 @@
 const app = 
 {
     länder: [],
-    städer: []
+    städer: [],
+    landID: "",
+    stadID: "",
 }
 
 fetch('./land.json')
@@ -35,7 +37,7 @@ function stad(data){
 function meny() {
     for (let index = 0; index < app.länder.length; index++) {
         const land = app.länder[index];
-        let landID = land.id;
+        landID = land.id;
         let landNamn = land.countryname;
         console.log(land, landID, landNamn);
         document.getElementById('landMeny').innerHTML += `<dt>`+landNamn+`</dt>`;  
