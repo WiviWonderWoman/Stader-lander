@@ -5,7 +5,7 @@ const app =
     städer: [],
     
 }
-
+console.log(app.städer);
 fetch('./land.json')
 .then(resp => resp.json())
 .then(data => land(data))
@@ -45,11 +45,10 @@ function meny() {
     
     let landMeny = document.getElementById('landMeny');
         landMeny.addEventListener('click', function(event) {
-            document.getElementById('content').innerHTML ="";
-            console.log(event.target.id);
+        document.getElementById('content').innerHTML ="";
+        console.log(event.target.id);
         let landID = event.target.id;
        
-    
         stadLand = app.städer.filter(a => a.countryid == landID); 
         
         for (let index = 0; index < stadLand.length; index++) {
@@ -59,15 +58,16 @@ function meny() {
             console.log(stadNamn);
             document.getElementById('content').innerHTML += `<li><button id="`+stadID+`">`+stadNamn+`</button></li>`;
         }
+        let stadMeny = document.getElementById('content');
+        stadMeny.addEventListener('click', function(event) {
+        console.log(event.target.id);
+        let landID = event.target.id;
+        });
         // let stadMeny = stadLand.stadname;
     });
     // console.log(stadLand);
     document.getElementById('landMeny').innerHTML += `<li><button id="visited">Besökt</button></li>`;
 }
   
-
-
-
-
 
 
