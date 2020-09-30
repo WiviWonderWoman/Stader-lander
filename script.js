@@ -53,9 +53,9 @@ function meny() {
     // och meny valet för "besökt"  
     document.getElementById('landMeny').innerHTML += `<li><button id="visited">Besökta</button></li>`;
 
-        // fångar upp klick på land, tömmer eventuellt tidigare innehåll
-        let landMeny = document.getElementById('landMeny');
-        landMeny.addEventListener('click', function(event) {
+    // fångar upp klick på land, tömmer eventuellt tidigare innehåll
+    let landMeny = document.getElementById('landMeny');
+    landMeny.addEventListener('click', function(event) {
             document.getElementById('content').innerHTML ="";
             document.getElementById('stadInfo').innerHTML ="";
 
@@ -93,7 +93,15 @@ function meny() {
             let invånare = stad.population; 
 
             // skriver ut informationen om staden
-             document.getElementById('stadInfo').innerHTML = `<div id="stad"><h2>`+namn+` är en stad i `+landNamn+`<br /> här bor `+invånare+` innvånare.</h2></div><div class="flex-container"><button id="spara">Besökt</button></div>`;
+            document.getElementById('stadInfo').innerHTML = `<div id="stad"><h2>`+namn+` är en stad i `+landNamn+`<br /> här bor `+invånare+` innvånare.</h2></div><div class="flex-container"><button id="spara">Besökt</button></div>`;
+
+            const spara = document.getElementById('spara');
+            spara.addEventListener('click', function() {
+                console.log('event', stadID);
+                localStorage.setItem(stadID, 'key');
+                
+                console.log(localStorage);
+            })
         });
     });
 }
