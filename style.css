@@ -3,7 +3,7 @@ body {
     padding: 0;
     background-color: rgb(78, 84, 84);
     color: cornsilk;
-    font-family: sans-serif;
+    font-family: 'Amatic SC';
 }
 header, nav, article, footer {
     width: 80%;
@@ -13,13 +13,13 @@ header, nav, article, footer {
     border-radius: 10px;
     background-color: black;
 }
-/* article, footer { 
+article, footer { 
     padding: 10px;
-} */
+}
 header, footer {
     justify-content: center;
 }
-header {
+header,footer {
     height: 5%; 
 }
 footer {
@@ -29,13 +29,31 @@ footer {
 /*Headings*/
 h1{ 
     margin: auto;   
-    font-family: 'Amatic SC';
+    /* font-family: 'Amatic SC'; */
     font-size: 3em;
     justify-content: center;
     display: flex; 
 }
+h2{
+    margin-bottom: 20px;   
+    justify-content: center;
+    display: flex;
+    color: black; 
+    margin: auto;
+    padding: 20px;  
+} 
+#stad {
+    margin-bottom: 30px;   
+    justify-content: center;
+    border: cornsilk solid 1px;
+    border-radius: 10px;
+    width: 80%;
+    background-color: cornsilk;
+    margin: auto;
+    padding: 20px;  
+}
 
- .flex-container{
+.flex-container{
     display: flex; 
     justify-content: center;
 } 
@@ -89,3 +107,13 @@ h1{
     background-color: green ;
     color: cornsilk;
 } 
+#spara {
+    background-color: rgb(68, 231, 139);
+    color: black; 
+    margin: 20px;
+}
+#spara:hover {
+    background-color: green ;
+    color: cornsilk;
+} 
+

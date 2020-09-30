@@ -7,16 +7,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
-<header><h1>DIN RESE DAGBOK</h1></header>
 <body>
+    <!-- sidhuvud -->
+    <header>
+        <h1>DIN RESE DAGBOK</h1>
+    </header>
+    <!--navigering, menyn med länder + besökta städer  -->
     <nav class="flex-container">
         <ul id="landMeny"></ul>
     </nav>
-    <article class="flex-container">
-        <ul id="content"></ul>
+    
+    <article >
+        <!-- navigering, meny med städer -->
+        <div class="flex-container">
+            <ul id="content"></ul>
+        </div>
+        <!-- div för displaya information om vald stad + besökt knappen -->
+        <div id="stadInfo"></div>
     </article>
+    <!-- sidfot  -->
     <footer class="flex-container"></footer>
- 
 <script src="./script.js"></script>
 </body>
 </html>
