@@ -12,9 +12,11 @@ header, nav, article, footer {
     border: cornsilk solid 1px;
     border-radius: 10px;
     background-color: black;
+    justify-content: center;
 }
 article, footer { 
     padding: 10px;
+    
 }
 header, footer {
     justify-content: center;
@@ -34,7 +36,7 @@ h1{
     justify-content: center;
     display: flex; 
 }
-h2{
+h2 {
     margin-bottom: 20px;   
     justify-content: center;
     display: flex;
@@ -42,20 +44,26 @@ h2{
     margin: auto;
     padding: 20px;  
 } 
-#stad {
-    margin-bottom: 30px;   
+#stad, #besökta {
+    margin: auto;   
     justify-content: center;
     border: cornsilk solid 1px;
     border-radius: 10px;
     width: 80%;
     background-color: cornsilk;
+    color: black;
     margin: auto;
     padding: 20px;  
+}
+#besökta ul {
+    
+    margin: auto;
 }
 
 .flex-container{
     display: flex; 
     justify-content: center;
+    /* flex-wrap: wrap; */
 } 
 
 .flex-container ul {
@@ -63,22 +71,19 @@ h2{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    list-style: none;
   } 
-/*Flexbox settings, center*/
-.flex-container{
-    display: flex; 
-    justify-content: center;
+#landMeny {
+    width: 75%;
 }
-/*unordered list, flex, wrap*/
-.flex-container ul {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
+#besöktMeny {
+    width: 25%;
+}
+
+  
 /*list items, grow, no bulletpoints*/  
 .flex-container ul li {
-    flex-grow: 1;
-    list-style: none;
+     
 } 
 /*buttons*/  
 .flex-container button{

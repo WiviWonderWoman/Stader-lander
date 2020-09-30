@@ -3,7 +3,8 @@
 const app = 
 {
     länder: [],
-    städer: [], 
+    städer: [],
+    besökta: [] 
 }
 
 // kontroll utskrift
@@ -48,14 +49,28 @@ function meny() {
         const land = app.länder[index];
         landID = land.id;
         landNamn = land.countryname;
-        document.getElementById('landMeny').innerHTML += `<li ><button id="`+landID+`">`+landNamn+`</button></li>`;  
-    } 
-    // och meny valet för "besökt"  
-    document.getElementById('landMeny').innerHTML += `<li><button id="visited">Besökta</button></li>`;
+        document.getElementById('landMeny').innerHTML += `<li ><button id="`+landID+`">`+landNamn+`</button></li>`; 
 
-        // fångar upp klick på land, tömmer eventuellt tidigare innehåll
-        let landMeny = document.getElementById('landMeny');
-        landMeny.addEventListener('click', function(event) {
+    } // och meny valet för "besökt"  
+    document.getElementById('besöktMeny').innerHTML += `<li><button id="visited">Besökta</button></li>`;
+    let visaStäder = document.getElementById('visited');
+    visaStäder.addEventListener('click', function() {
+        document.getElementById('content').innerHTML =`<div id="besökta"><ul></ul></div>`;
+        document.getElementById('stadInfo').innerHTML = "";
+        
+        for (let index = 0; index < app.besökta.length; index++) {
+            const element = app.besökta[index];
+            console.log(element);
+
+            let staden = app.städer.find(a => a.id == element);
+            document.getElementById('besökta').innerHTML += `<li>`+staden.stadname+`</li>`;
+            console.log(staden);
+        }
+    })
+
+    // fångar upp klick på land, tömmer eventuellt tidigare innehåll
+    let landMeny = document.getElementById('landMeny');
+    landMeny.addEventListener('click', function(event) {
             document.getElementById('content').innerHTML ="";
             document.getElementById('stadInfo').innerHTML ="";
 
@@ -93,7 +108,17 @@ function meny() {
             let invånare = stad.population; 
 
             // skriver ut informationen om staden
-             document.getElementById('stadInfo').innerHTML = `<div id="stad"><h2>`+namn+` är en stad i `+landNamn+`<br /> här bor `+invånare+` innvånare.</h2></div><div class="flex-container"><button id="spara">Besökt</button></div>`;
+            document.getElementById('stadInfo').innerHTML = `<div id="stad"><h2>`+namn+` är en stad i `+landNamn+`<br /> här bor `+invånare+` invånare.</h2></div><div class="flex-container"><button id="spara">Besökt</button></div>`;
+
+            const spara = document.getElementById('spara');
+            spara.addEventListener('click', function() {
+                console.log('event', stadID);
+                // let besöktStad = stadID;
+                app.besökta.push(stadID);
+                localStorage.setItem('key', app.besökta);
+                
+                console.log(localStorage, app.besökta);
+            })
         });
     });
 }
