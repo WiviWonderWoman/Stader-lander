@@ -7,8 +7,11 @@ const app =
     besökta: [] 
 }
 console.log(localStorage);
-app.besökta.push(localStorage.getItem('key'));
-// kontroll utskrift
+ if(localStorage.getItem('id') !== null) {
+    app.besökta = JSON.parse(localStorage.getItem("id") || "[]");
+    // app.besökta = [localStorage.getItem('id')];
+ }
+
 console.log(app.besökta);
 
 
@@ -61,7 +64,7 @@ function meny() {
         
         for (let index = 0; index < app.besökta.length; index++) {
             const element = app.besökta[index];
-            console.log(element);
+            // console.log(element);
 
             let staden = app.städer.find(a => a.id == element);
             document.getElementById('besökta').innerHTML += `<li>`+staden.stadname+`</li>`;
@@ -113,20 +116,12 @@ function meny() {
             const spara = document.getElementById('spara');
             spara.addEventListener('click', function() {
                 console.log('event', stadID);
-                // let besöktStad = stadID;
+                
                 app.besökta.push(stadID);
                 
-                let storage = [localStorage.getItem('key')];
-                storage.push(stadID);
-                console.log(localStorage);
-                if(storage !== null) {
-                    localStorage.setItem('key', storage);
-                }
-
-                
-                console.log(storage);
-                console.log(localStorage);
-                console.log(app.besökta);
+                localStorage.setItem("id", JSON.stringify(app.besökta));
+                console.log('localS', localStorage);
+                console.log('besökta', app.besökta);
             })
         });
     });
