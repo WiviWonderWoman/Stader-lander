@@ -6,10 +6,11 @@ const app =
     städer: [],
     besökta: [] 
 }
-
+console.log(localStorage);
+app.besökta.push(localStorage.getItem('key'));
 // kontroll utskrift
-console.log(app.städer);
-console.log(app.länder);
+console.log(app.besökta);
+
 
 // hämta länderna, sparar i en array och anropar funktionen meny
 fetch('./land.json')
@@ -76,7 +77,6 @@ function meny() {
 
             // fångar upp id på klickat land
             landID = event.target.id;
-
             // letar upp landet för att spara landsnamnet
             let landet = app.länder.find(a => a.id == landID);
             landNamn = landet.countryname;
@@ -115,13 +115,19 @@ function meny() {
                 console.log('event', stadID);
                 // let besöktStad = stadID;
                 app.besökta.push(stadID);
-                localStorage.setItem('key', app.besökta);
                 
-                console.log(localStorage, app.besökta);
+                let storage = [localStorage.getItem('key')];
+                storage.push(stadID);
+                console.log(localStorage);
+                if(storage !== null) {
+                    localStorage.setItem('key', storage);
+                }
+
+                
+                console.log(storage);
+                console.log(localStorage);
+                console.log(app.besökta);
             })
         });
     });
 }
-  
-
-
