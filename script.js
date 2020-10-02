@@ -116,8 +116,8 @@ function meny() {
 
             // skriver ut meddelande om att minnet är rensat
             document.getElementById('content').innerHTML = `<h2>Minnet är tömt!</h2>`
-        })
-    })
+        });
+    });
     // fångar upp klick på land,
     let landMeny = document.getElementById('landMeny');
     landMeny.addEventListener('click', function(event) {
@@ -174,7 +174,7 @@ function meny() {
                 // kontrollutskrift
                 console.log('localS', localStorage);
                 console.log('besökta', app.besökta);
-            })
+            });
         });
     });
 }
