@@ -1,5 +1,5 @@
-# stader-lander-WiviWonderWoman
-stader-lander-WiviWonderWoman created by GitHub Classroom
+# stader-lander
+stader-lander-WiviWonderWoman created by GitHub Classroom (MVP-kursen)
 
 Välkommen till inlämningsuppgift Städer och länder. Kom ihåg att tolka och stäm av att du förstått följande kravlista i god tid innan du påbörjar arbetet med uppgiften.
 Inlämningen består i att göra en sida där dynamisk inhämtning och lagring av data används för att visualisera användarens besökta städer och länder.
