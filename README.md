@@ -1,4 +1,5 @@
-# stader-lander - Webbapplikation MVP - oktober 2020
+# Staäer och länder
+## Webbapplikation MVP - oktober 2020
 100/100 (VG)
 ## Kravspecifikation:
 * De bifogade JSON-filerna ska användas, utan modifiering. (10p)
