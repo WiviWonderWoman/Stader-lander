@@ -1,4 +1,4 @@
-# Staäer och länder
+# Städer och länder
 ## Webbapplikation MVP - oktober 2020
 100/100 (VG)
 ## Kravspecifikation:
