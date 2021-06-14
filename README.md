@@ -3,6 +3,9 @@
 Inlämningsuppgift i kursen Webbapplikation MVP, Webbutvecklare inom .NET, YH-utbildning - oktober 2020
 * 100/100 (VG)
 ## Tekniker
+* HTML
+* CSS
+* JavaScript
 * SPA
 * Fetch API
 * JSON
